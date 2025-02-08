@@ -72,8 +72,48 @@ button:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
+    .login-container {
         width: 95%;
-        padding: 20px;
     }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer a {
+    color: #f4b400;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
