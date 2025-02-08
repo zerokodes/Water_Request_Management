@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <a href="#" id="viewAllRequests">See All Requests</a>
+            <a href="#" id="viewPending">See Pending Requests</a>
+        </div>
+    
+        <!-- Main Content -->
+        <div class="main-content">
+            <h2>Requests</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Lodge Name</th>
+                        <th>City</th>
+                        <th>Room No</th>
+                        <th>Quantity</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="requestsBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script> <!-- Link to your JS file -->
+</body>
+</html>
+
+
