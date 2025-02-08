@@ -26,7 +26,7 @@ document.getElementById('viewPendingRequests').addEventListener('click', functio
 
 async function fetchRequests(endpoint) {
     try {
-        const response = await fetch(`http://localhost:5000/api/v1/requests/${endpoint}`, {
+        const response = await fetch(`https://water-request-management-backend.onrender.com/api/v1/requests/${endpoint}`, {
             headers: { 'Authorization': `Bearer ${token}` }
         });
 
@@ -89,7 +89,7 @@ function displayRequests(requests) {
 
 async function markRequestComplete(id) {
     try {
-        await fetch(`http://localhost:5000/api/v1/requests/${id}/complete`, {
+        await fetch(`https://water-request-management-backend.onrender.com/api/v1/requests/${id}/complete`, {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -106,7 +106,7 @@ async function markRequestComplete(id) {
 
 async function cancelRequest(id) {
     try {
-        await fetch(`http://localhost:5000/api/v1/requests/${id}/cancel`, {
+        await fetch(`https://water-request-management-backend.onrender.com/api/v1/requests/${id}/cancel`, {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`,

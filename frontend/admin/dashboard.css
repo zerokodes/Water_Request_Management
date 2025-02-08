@@ -85,6 +85,28 @@ th {
     color: white;
 }
 
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+}
+
+footer a {
+    color: #f4b400;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .sidebar {
@@ -92,6 +114,9 @@ th {
     }
     .main-content {
         margin-left: 210px;
+    }
+    footer {
+        font-size: 12px;
     }
 }
 
@@ -114,6 +139,9 @@ th {
     th, td {
         padding: 8px;
     }
+    footer {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -132,6 +160,9 @@ th {
     .sidebar a {
         padding: 5px;
         font-size: 14px;
+    }
+    footer {
+        font-size: 12px;
     }
 }
 
