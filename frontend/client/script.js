@@ -2,7 +2,7 @@
 document.getElementById('waterRequestForm').addEventListener('submit', async function(event) {
     event.preventDefault();
 
-    const API_URL = "http://localhost:5000/api/v1/requests/";
+    const API_URL = "https://water-request-management-backend.onrender.com/api/v1/requests/";
 
     const requestData = {
         lodgeName: document.getElementById('lodgeName').value,
@@ -23,14 +23,16 @@ document.getElementById('waterRequestForm').addEventListener('submit', async fun
 
         const data = await response.json();
         if (response.ok) {
-            alert('Request submitted successfully!');
+            // Show success alert
+            alert('✅ Request submitted successfully!');
+
             document.getElementById('waterRequestForm').reset();
         } else {
-            alert(data.error || 'An error occurred');
+            alert(`⚠️ Error: ${data.error || 'An error occurred while submitting the request'}`);
         }
     } catch (error) {
         console.error('Error submitting request:', error);
-        alert('Failed to submit request');
+        alert('❌ Failed to submit request. Please try again later.');
     }
 });
 
