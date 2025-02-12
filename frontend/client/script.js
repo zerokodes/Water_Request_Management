@@ -2,6 +2,9 @@
 document.getElementById('waterRequestForm').addEventListener('submit', async function(event) {
     event.preventDefault();
 
+    const submitButton = event.target.querySelector('button[type="submit"]');
+    submitButton.disabled = true; // Disable the button
+
     const API_URL = "https://water-request-management-backend.onrender.com/api/v1/requests/";
 
     const requestData = {
@@ -33,6 +36,8 @@ document.getElementById('waterRequestForm').addEventListener('submit', async fun
     } catch (error) {
         console.error('Error submitting request:', error);
         alert('❌ Failed to submit request. Please try again later.');
+    }finally {
+        submitButton.disabled = false; // Re-enable the button after request completes
     }
 });
 
