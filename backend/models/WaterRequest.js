@@ -11,6 +11,10 @@ const WaterRequestSchema = new mongoose.Schema({
     enum: ["Pending", "Completed", "Cancelled"],
     default: "Pending",
   },
+  junctionName: {
+    type: String,
+    default: "none"
+  },
   createdAt: { type: Date, default: Date.now },
 });
 

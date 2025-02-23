@@ -1,4 +1,18 @@
 // script.js
+
+document.getElementById('city').addEventListener('change', function() {
+    let junctionField = document.getElementById('junctionField');
+    let junctionInput = document.getElementById('junctionName');
+
+    if (this.value === 'Awka') {
+        junctionField.style.display = 'block';
+        junctionInput.setAttribute('required', 'true'); // Make it required when Awka is selected
+    } else {
+        junctionField.style.display = 'none';
+        junctionInput.removeAttribute('required'); // Remove required attribute when not needed
+    }
+});
+
 document.getElementById('waterRequestForm').addEventListener('submit', async function(event) {
     event.preventDefault();
 
@@ -18,6 +32,11 @@ document.getElementById('waterRequestForm').addEventListener('submit', async fun
         phoneNumber: document.getElementById('phoneNumber').value,
         city: document.getElementById('city').value
     };
+
+    // Add junction name only if the city is Awka
+    if (requestData.city === 'Awka') {
+        requestData.junctionName = document.getElementById('junctionName').value;
+    }
 
     try {
         const response = await fetch(API_URL, {

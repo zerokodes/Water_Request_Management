@@ -154,3 +154,31 @@ footer a:hover {
     background-color: #5a6268;
     cursor: not-allowed;
 }
+
+
+/* Junction Field Styling */
+#junctionField {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#junctionField label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#junctionName {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#junctionName:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
