@@ -206,12 +206,30 @@ footer a:hover {
 }
 
 
-/* Base styles for the junction column */
+/* Hide junction column by default */
 .junction-column {
-    display: none; /* Hidden by default */
+    display: none;
 }
 
-/* Show junction column only when applicable */
+/* Show junction column only when the city is Awka */
 .city-awka .junction-column {
-    display: table-cell; /* Show only when Awka is selected */
+    display: table-cell;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
