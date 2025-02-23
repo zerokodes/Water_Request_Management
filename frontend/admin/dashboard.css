@@ -204,3 +204,14 @@ footer a:hover {
     font-weight: bold;
     color: #333;
 }
+
+
+/* Base styles for the junction column */
+.junction-column {
+    display: none; /* Hidden by default */
+}
+
+/* Show junction column only when applicable */
+.city-awka .junction-column {
+    display: table-cell; /* Show only when Awka is selected */
+}
